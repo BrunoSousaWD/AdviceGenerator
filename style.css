@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    --primary-font: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    --: hsl(217, 19%, 38%);
+    --card-bg:hsl(217, 19%, 24%);
+    --body-bg:hsl(218, 23%, 16%);
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background: var(--body-bg);
+    color: var(--primary-font);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.container{
+    background: var(--card-bg);
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 600px; 
+    border-radius: 15px;
+}
+
+.container--content{
+    position: relative;
+    padding: 35px;
+}
+
+.container--content h1{
+    color: var(--neon-green);
+    font-size: 14px;
+    letter-spacing: .4ch;
+}
+
+.container--content p{
+    font-size: 28px;
+}
+
+.content--devider{
+    margin-bottom: 2em;
+}
+
+.container--content button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--neon-green);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: -60px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+}
+
+.container--content button:hover{
+    box-shadow:0px 0px 29px 0px hsl(150, 100%, 66%);
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        max-width: 380px;
+    }
+
+    .container--content p{
+        font-size: 28px;
+    }
+    .container--content img{
+        max-width: 100%;
+    }
+}
